@@ -1,0 +1,26 @@
+﻿@model FileModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<div class="container">
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="File" class="col-form-label"></label>
+            <div class="custom-file">
+                <input asp-for="File" class="custom-file-input" id="custom-file" />
+                <label asp-for="File" class="custom-file-label"></label>
+                <span asp-validation-for="File" class="text-danger"></span>
+            </div>
+            
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-success">Upload</button>
+        </div>
+    </form>
+</div>
+
